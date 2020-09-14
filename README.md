@@ -15,7 +15,7 @@ Max Cantor, Parameswaran Kandasamy, Charlene Luo, Michele Tram
 ### Requirements  
 In addition to the python package requirements in requirements.txt, this package has the following requirements:  
 * python  
-* a databricks account  
+* a databricks account (not technically required, but may be useful)  
 * a New York Open Data account and app token  
 * a local copy or dbfs uploaded copy of the NYPD Misconduct Complaint Database: https://github.com/new-york-civil-liberties-union/NYPD-Misconduct-Complaint-Database  
 
