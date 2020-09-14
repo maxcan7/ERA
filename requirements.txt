@@ -1,0 +1,5 @@
+google-oauth
+google-api-python-client
+pandas
+pyyaml
+sodapy
