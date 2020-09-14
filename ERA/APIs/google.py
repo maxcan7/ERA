@@ -7,15 +7,18 @@ from ERA.APIs import APIClient
 
 class GoogleAPIClient(APIClient):
 
-    def __init__(self, service, service_version):
-        creds = self.__load_credentials()
+    def __init__(self, service, service_version, constants=None):
+        creds = self.__load_credentials(constants)
         self.service = build(
             service, service_version, credentials=creds, cache_discovery=False # noqa
         )
 
-    def __load_credentials(self):
-        with open('constants.yml', 'r') as f:
-            google_vars = yaml.safe_load(f)['GOOGLE']
+    def __load_credentials(self, constants=None):
+        if constants:
+            google_vars = constants['GOOGLE']
+        else:
+            with open('constants.yml', 'r') as f:
+                google_vars = yaml.safe_load(f)['GOOGLE']
         refresh_token = google_vars['GOOGLE_API_REFRESH_TOKEN']
         token_uri = google_vars['GOOGLE_API_TOKEN_URI']
         client_id = google_vars['GOOGLE_API_CLIENT_ID']

@@ -1,3 +1,4 @@
+databricks-cli
 flake8
 google-oauth
 google-api-python-client

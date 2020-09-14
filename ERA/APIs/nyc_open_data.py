@@ -6,8 +6,8 @@ from ERA.APIs import APIClient
 
 class NYCODAPIClient(APIClient):
 
-    def __init__(self):
-        creds = self.__load_credentials()
+    def __init__(self, constants=None):
+        creds = self.__load_credentials(constants)
         self.DATA_URL = creds['DATA_URL']
         self.DATASET = creds['DATASET']
         self.service = Socrata(
@@ -18,7 +18,9 @@ class NYCODAPIClient(APIClient):
         )
         self.service.timeout = 60
 
-    def __load_credentials(self):
+    def __load_credentials(self, constants=None):
+        if constants:
+            return constants['NYCOD']
         with open('constants.yml', 'r') as f:
             return yaml.safe_load(f)['NYCOD']
 

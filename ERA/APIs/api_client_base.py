@@ -6,5 +6,5 @@ class APIClient:
     def __load_credentials(self):
         pass
 
-    def get(self, json_query):
+    def get(self, query):
         pass
