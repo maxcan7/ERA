@@ -1,7 +1,7 @@
 # Equal Rights for All (Conde Nast 2020 Hackathon Entry)  
 
 ## Participants  
-Max Cantor, Parameswaran Kandasamy, Charlene Luo, Michele Tram  
+Max Cantor, Parameswaran Kandasamy, Charlene Luo, Michele Tram, Satnam Gandhi  
 
 ### How to use  
 * Clone / fork this repo  
