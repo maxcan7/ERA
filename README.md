@@ -17,7 +17,10 @@ In addition to the python package requirements in requirements.txt, this package
 * python  
 * a databricks account (not technically required, but may be useful)  
 * a New York Open Data account and app token  
-* a local copy or dbfs uploaded copy of the NYPD Misconduct Complaint Database: https://github.com/new-york-civil-liberties-union/NYPD-Misconduct-Complaint-Database  
+* a local copy or a copy uploaded to a file system of the NYPD Misconduct Complaint Database: https://github.com/new-york-civil-liberties-union/NYPD-Misconduct-Complaint-Database  
 
 ### Description  
 Creates normalized class structures for various offline datasets (e.g. `NYPDComplaints`) and online data sources (e.g. `NYCODAPIClient`)  
+
+### Front-End
+Datasets wrangled using this platform were passed to a front-end project; a react-based web app of datapoints mapped onto google maps, among other features. Within the timeframe of the hackathon and other logistics, we were not able to fully synchronize these projects. https://github.com/CondeNast/era  

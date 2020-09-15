@@ -10,7 +10,7 @@ class GoogleAPIClient(APIClient):
     def __init__(self, service, service_version, constants=None):
         creds = self.__load_credentials(constants)
         self.service = build(
-            service, service_version, credentials=creds, cache_discovery=False # noqa
+            service, service_version, credentials=creds
         )
 
     def __load_credentials(self, constants=None):
@@ -31,3 +31,18 @@ class GoogleAPIClient(APIClient):
             client_id=client_id,
             client_secret=client_secret,
         )
+
+
+class GoogleCivicClient(GoogleAPIClient):
+
+    def __init__(self, constants=None):
+        super(GoogleAPIClient, self)\
+            .__init__('civicinfo', 'v2', constants=constants)
+
+    def get(self, query, **kwargs):
+        '''
+        Due to issues with the Google API credentials, we
+        decided not to pursue this dataset or other Google
+        datasets for this project
+        '''
+        pass
